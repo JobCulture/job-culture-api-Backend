@@ -1,37 +1,25 @@
 {
-  "name": "job-culture-backend",
+  "name": "job-culture-api-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && babel src --out-dir dist  --copy-files",
-    "start": "node dist/server.js",
-    "dev": "nodemon --exec babel-node src/server.js"
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JobCulture/job-culture-api-Backend.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "pg": "^8.7.3",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.7",
-    "winston": "^3.8.1",
-    "yup": "^0.32.11"
+  "bugs": {
+    "url": "https://github.com/JobCulture/job-culture-api-Backend/issues"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.18.9",
-    "@babel/core": "^7.18.9",
-    "@babel/node": "^7.18.9",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-decorators": "^7.18.9",
-    "@babel/plugin-proposal-object-rest-spread": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.13",
-    "@types/node": "^18.6.1",
-    "nodemon": "^2.0.19",
-    "rimraf": "^3.0.2"
+  "homepage": "https://github.com/JobCulture/job-culture-api-Backend#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "pg": "^8.7.3"
   }
 }

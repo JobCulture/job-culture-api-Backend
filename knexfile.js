@@ -1,4 +1,5 @@
 // Update with your config settings.
+require('dotenv').config()
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -10,9 +11,9 @@ module.exports = {
     connection: {
       host: "localhost",
       port: 5432,
-      database: 'jobculture',
-      user:     'postgres',
-      password: ''
+      database: process.env.DATABASE,
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD
     }
   },
 

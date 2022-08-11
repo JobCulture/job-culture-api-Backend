@@ -6,7 +6,7 @@ exports.seed = async function(knex) {
   // Deletes ALL existing entries
   await knex('review').insert([
     {
-      user_id: null,
+      user_id: 2,
       company_id: 4,
       review_text: 'Great workplace',
       rating: 2

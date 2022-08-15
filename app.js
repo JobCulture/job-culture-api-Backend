@@ -4,7 +4,11 @@ const port = 3000
 app.use(express.json())
 //All endpoints go here
 const router = require('../job-culture-api-Backend/routes/userrouter')
-app.use('/', router) //define endpoints here. //router function is called here
+const companyrouter = require('../job-culture-api-Backend/routes/companyrouter')
+const reviewrouter = require('../job-culture-api-Backend/routes/reviewrouter')
+app.use('/',router) //define endpoints here. //router function is called here
+app.use('/',companyrouter) //define company router here
+app.use('/',reviewrouter)//review router defined here
 app.get('/', (req, res) => {
     res.status(200).json({"message" : "This Api Is Working :)"});
 })

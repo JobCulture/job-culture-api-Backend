@@ -25,7 +25,20 @@ async function singleCompany(req, res) {
     }
 }
 
+async function companySearch(req, res) {
+    const input = req.body
+    try{
+        const searchACompany = await companyModels.searchCompany(input);
+        res.status(200).json({
+            companydb: searchACompany
+        })
+    }catch(err) {
+        res.status(404).send({message: err.message});
+    }
+}
+
 module.exports = {
     getAllCompany,
-    singleCompany
+    singleCompany,
+    companySearch
 }

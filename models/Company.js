@@ -11,7 +11,7 @@ class Company {
         return companyDataFromDb.rows[0];
     }
     static async searchCompany(input){
-        const companyDataFromDb = await companyData.query(`SELECT * FROM "company" WHERE company.name LIKE input = $1 %`, [input])
+        const companyDataFromDb = await companyData.query(`SELECT * FROM "company" WHERE company.name ILIKE $1`, [`%${input}%`])
         return companyDataFromDb.rows;
     }
 }

@@ -6,18 +6,23 @@ exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex('user').insert([
     {
+      id: 1,
       is_employee: false
     },
     {
+      id: 2,
       is_employee: true
     },
     {
+      id:3, 
       is_employee: false
     },
     {
+      id: 4,
       is_employee: false
     },
     {
+      id: 5,
       is_employee: true
     }
   ]);

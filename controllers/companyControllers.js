@@ -1,7 +1,7 @@
-const companyModels = require('../models/Company')
+const companyModels = require('../models/Company');
+const reviewModels = require('../models/Reviews');
 
 //get All Companies
-
 async function getAllCompany(req, res){
     try {
         const findAllCompanies = await companyModels.everyCompany();
@@ -17,8 +17,18 @@ async function singleCompany(req, res) {
     const id = req.params.id
     try{
         const getSingleCompany = await companyModels.oneCompany(id);
+        const getTotalReviews = await reviewModels.getTotalReviews(id);
+        const averageRatings = await reviewModels.getAverageRatings(id);
+        let calcAverage = 0;
+        averageRatings.forEach(element => { 
+            calcAverage = parseInt(element.rating) + calcAverage;
+         });
+         
         res.status(200).json({
-            companydb: getSingleCompany
+            companydb: getSingleCompany,
+            total_reviews: getTotalReviews,
+            average_rating: calcAverage / averageRatings.length,
+            ratings: averageRatings
         })
     }catch(err) {
         res.status(404).send({message: err.message});

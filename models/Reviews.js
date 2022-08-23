@@ -16,6 +16,12 @@ class Review {
         const averageRatings = await reviewData.query('SELECT AVG(rating) as rating, characteristic_id FROM "review" WHERE review.company_id = $1 group by characteristic_id', [companyID])
         return averageRatings.rows;
     }
+    
+    static async postReview(newReviewInfo) {
+        const {user_id,company_id,review_text, rating} = newReviewInfo
+        const reviewDataFromDb = await reviewData.query('INSERT INTO review (user_id,company_id,review_text,rating) VALUES ($1, $2, $3, $4) RETURNING *' , [user_id, company_id, review_text, rating])
+        return reviewDataFromDb.rows;
+    }
 }
 
 module.exports = Review;

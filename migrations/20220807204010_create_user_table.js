@@ -7,6 +7,8 @@ exports.up = function (knex) {
         table.increments('id').primary()
         table.string('name').defaultTo('anonymous')
         table.boolean('is_employee')
+        table.string('job_location')
+        table.string('job_position')
     })
 };
 

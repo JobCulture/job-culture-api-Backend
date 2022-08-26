@@ -4,8 +4,7 @@
  */
 exports.up = function(knex) {
   return knex.schema.alterTable('review', function (table) {
-    table.integer('characteristic').unsigned()
-    table.foreign('characteristic').references('characteristic.id')
+    table.renameColumn('characteristic', 'characteristic_id')
   })
 };
 
@@ -14,5 +13,8 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+  return knex.schema.alterTable('review', function (table) {
+    table.renameColumn('characteristic_id', 'characteristic')
+  })
 };
+

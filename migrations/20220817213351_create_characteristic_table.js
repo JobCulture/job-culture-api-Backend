@@ -8,6 +8,8 @@ exports.up = function(knex) {
     table.string('group')
     table.string('type')
     table.string('name')
+    table.string('full_description')
+    table.string('short_description')
 })
 };
 

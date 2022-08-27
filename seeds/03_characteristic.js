@@ -35,7 +35,7 @@ exports.seed = async function(knex) {
       type: 'Workplace Experience',
       name: 'Remote flexibility',
       full_description: '',
-      short_description: 'I am able to decide when I work remotely and when I work at the office (this can include fully remote options)',
+      short_description: 'I am able to decide when I work remotely and when I work at the office (this can include fully remote options).',
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ exports.seed = async function(knex) {
       type: 'Workplace Experience',
       name: 'Young & fun environment',
       full_description: '',
-      short_description: '',
+      short_description: 'I am friendly with my co-workers and enjoy collaborating on projects.  We all address each other by our first names.',
     },
     {
       id: 7,
@@ -59,7 +59,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Growth opportunies',
       full_description: '',
-      short_description: '',
+      short_description: 'My company encourages employees to learn and grow, and has career paths available to me.',
     },
     {
       id: 8,
@@ -67,7 +67,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Work Satisfaction',
       full_description: '',
-      short_description: '',
+      short_description: 'I feel good about the work I do, it is valued, meaningful and has purpose.',
     },
     {
       id: 9,
@@ -75,7 +75,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Managerial Support',
       full_description: '',
-      short_description: '',
+      short_description: 'My managers have my back when I come to them with issues, and they take my opinion into account.',
     },
     {
       id: 10,
@@ -83,7 +83,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Diverse leadership',
       full_description: '',
-      short_description: '',
+      short_description: 'I see people of various backgrounds in positions of leadership.',
     },
     {
       id: 11,
@@ -91,7 +91,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Mentorship',
       full_description: '',
-      short_description: '',
+      short_description: 'I can easily find someone to coach me and help me learn and grow.',
     },
     {
       id: 12,
@@ -99,7 +99,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Team support',
       full_description: '',
-      short_description: '',
+      short_description: 'My team supports each other as we collaborate, and communicate freely together.',
     },
     {
       id: 13,
@@ -107,7 +107,7 @@ exports.seed = async function(knex) {
       type: 'Personal Growth',
       name: 'Collaborative environment',
       full_description: '',
-      short_description: '',
+      short_description: 'We are encouraged to work together in a cross-functional manner and utilize our different skill sets to achieve goals and solve problems.  ',
     },
     {
       id: 14,
@@ -115,7 +115,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Compensation',
       full_description: '',
-      short_description: '',
+      short_description: 'I work with people who look like me and also people who don’t look like me.',
     },
     {
       id: 15,
@@ -123,7 +123,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Personal/ vacation time',
       full_description: '',
-      short_description: '',
+      short_description: 'Vacation and/or Personal time is available and time off is encouraged.',
     },
     {
       id: 16,
@@ -131,7 +131,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Executive team',
       full_description: '',
-      short_description: '',
+      short_description: 'In general, I agree with the decisions and vision for the company made by the executive team.  They are supportive in guiding the organization to reach those goals.',
     },
     {
       id: 17,
@@ -139,7 +139,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Benefits & perks',
       full_description: '',
-      short_description: '',
+      short_description: 'I am happy with the benefits and perks I get from my company.',
     },
     {
       id: 18,
@@ -147,7 +147,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Job security',
       full_description: '',
-      short_description: '',
+      short_description: 'I am confident I will have this job for the foreseeable future.',
     },
     {
       id: 19,
@@ -155,7 +155,7 @@ exports.seed = async function(knex) {
       type: 'Traditional',
       name: 'Interview process',
       full_description: '',
-      short_description: '',
+      short_description: 'I was told what the interview process was, and I was updated on the status of my application in a timely manner.',
     },
   ]);
 };

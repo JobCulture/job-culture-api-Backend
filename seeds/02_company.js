@@ -35,5 +35,35 @@ exports.seed = async function (knex) {
       info: 'TikTok is the leading destination for short-form mobile video. Our mission is to inspire creativity and bring joy',
       location: 'North America'
     },
+    {
+      id: 6,
+      name: 'Spotify',
+      info: 'Spotify is a proprietary Swedish audio streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon.',
+      location: 'Sweden'
+    },
+    {
+      id: 7,
+      name: 'Spotify',
+      info: 'Spotify is a proprietary Swedish audio streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon.',
+      location: 'Sweden'
+    },
+    {
+      id: 8,
+      name: 'PayPal',
+      info: 'PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in the majority of countries.',
+      location: 'California, U.S.'
+    },
+    {
+      id: 9,
+      name: 'Youtube',
+      info: 'YouTube is an American online video sharing and social media platform headquartered in San Bruno, California.',
+      location: 'California, U.S.'
+    },
+    {
+      id: 10,
+      name: 'Twitch',
+      info: 'Twitch is an American video live streaming service that focuses on video game live streaming, including broadcasts of esports competitions.',
+      location: 'California, U.S.'
+    },
   ]);
 };

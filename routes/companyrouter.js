@@ -4,5 +4,6 @@ const companyController = require('../controllers/companyControllers')
 router.get('/companies', companyController.getAllCompany) //get all companies
 router.get('/companies/search', companyController.companySearch) //search for a company 
 router.get('/companies/:id', companyController.singleCompany)//get a single company
+router.post('/companies', companyController.newCompany)
 
 module.exports = router

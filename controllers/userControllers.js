@@ -11,7 +11,7 @@ async function getAllUsers(req, res) {
         res.status(500).send({message: err.message});
 } 
 }
-//SingleUser
+//GetSingleUser
 async function singleUser(req, res) {
     const id = req.params.id 
      try{
@@ -21,7 +21,23 @@ async function singleUser(req, res) {
          res.status(404).send({message: err.message});
      }
  }
+
+ //postUser
+ async function newUser(req, res){
+    const {name, job_location, job_position} = req.body
+        if(!name || !job_location || !job_position){
+        res.status(400).json({message: "must complete remainder of body"})
+    }
+    try {
+        const createNewUser = await userModels.newUserCreate(name, job_location, job_position)
+        res.status(200).json(createNewUser)
+    }catch(err) {
+        res.status(404).send({message: err.message});
+    }
+}
+
 module.exports = {
     getAllUsers,
-    singleUser
+    singleUser,
+    newUser
 }

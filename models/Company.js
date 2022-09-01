@@ -14,5 +14,10 @@ class Company {
         const companyDataFromDb = await companyData.query(`SELECT * FROM "company" WHERE company.name ILIKE $1`, [`%${input}%`])
         return companyDataFromDb.rows;
     }
+    static async newCompanyCreate(name,info,location){
+        const companyDataFromDb = await companyData.query('INSERT into "company" (name,info,location) values ($1,$2,$3)', 
+        [name,info,location])
+        return companyDataFromDb.rows;
+    }
 }
 module.exports = Company;

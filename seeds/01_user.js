@@ -16,7 +16,7 @@ exports.seed = async function (knex) {
       job_location: '',
     },
     {
-      id:3, 
+      id: 3, 
       job_position: 'Product Designer',
       job_location: 'New York, NY',
     },

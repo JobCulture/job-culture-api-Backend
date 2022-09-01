@@ -10,7 +10,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Work-life balance',
-      full_description: '',
+      full_description: 'The level of prioritisation between personal and professional activities in an individual’s life and the level to which activities related to their job are present in the home.  The purpose is the minimization of work-related stress, and the establishing of a stable and sustainable way to work while maintaining health and general well-being.',
       short_description: 'I am able to balance work demands and my personal life',
     },
     {
@@ -18,7 +18,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Diversity',
-      full_description: '',
+      full_description: 'The inclusion of individuals representing more than one national origin, color, religion, socioeconomic stratum, sexual orientation, etc.',
       short_description: 'My colleagues are of different backgrounds, religion, sexual orientation, etc.',
     },
     {
@@ -26,7 +26,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Trust',
-      full_description: '',
+      full_description: 'The firm belief in the reliability, truth, or ability of someone or something, but also including the expectation of ethically justifiable behavior.',
       short_description: 'I feel there is a culture of honesty, respect, and psychological safety at work',
     },
     {
@@ -34,7 +34,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Remote flexibility',
-      full_description: '',
+      full_description: 'A type of flexible working arrangement that allows an employee to work from remote location outside of corporate offices and can also include include flexible working hours. Flexible work can include all types of remote and hybrid work.',
       short_description: 'I am able to decide when I work remotely and when I work at the office (this can include fully remote options).',
     },
     {
@@ -42,7 +42,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Inclusive environment',
-      full_description: '',
+      full_description: 'Aiming to include and integrate all people and groups in activities, organizations, political processes, etc., especially those who are disadvantaged, have suffered discrimination, or are living with disabilities:',
       short_description: 'My workplace treats everyone with dignity and fairness, is free of harassment and discrimination, and believes diversity brings our organization a wealth of experience that builds a better team.',
     },
     {
@@ -50,7 +50,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Workplace Experience',
       name: 'Young & fun environment',
-      full_description: '',
+      full_description: 'An informal and low-shame workplace that allows for constructive feedback, increased team building, and greater recognition and encourages moderate risk-taking, speaking your mind and creativity.',
       short_description: 'I am friendly with my co-workers and enjoy collaborating on projects.  We all address each other by our first names.',
     },
     {
@@ -58,7 +58,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Growth opportunies',
-      full_description: '',
+      full_description: 'A structure in place to progress within the company and challenge your mind and skills as you progress professionally.',
       short_description: 'My company encourages employees to learn and grow, and has career paths available to me.',
     },
     {
@@ -66,7 +66,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Work Satisfaction',
-      full_description: '',
+      full_description: 'A measure of workers contentedness with their job, whether they like the job or individual aspects or facets of jobs, such as nature of work or supervision.',
       short_description: 'I feel good about the work I do, it is valued, meaningful and has purpose.',
     },
     {
@@ -74,7 +74,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Managerial Support',
-      full_description: '',
+      full_description: 'Managerial support is the extent to which managers appreciate employees contributions, care about their subordinates well-being and are attentive to employee needs.  Team members are allowed to do their job without someone standing over their shoulders, given opportunities to make decisions, assigned personal responsibilities and empowered to succeed and do what they do well.',
       short_description: 'My managers have my back when I come to them with issues, and they take my opinion into account.',
     },
     {
@@ -82,7 +82,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Diverse leadership',
-      full_description: '',
+      full_description: 'Leadership roles include people of different color, religion, socioeconomic stratum, sexual orientation, etc.  Diversity in leadership means greater depth and breadth of experience and perspective, which in turn allows for a greater ability to relate to employees.',
       short_description: 'I see people of various backgrounds in positions of leadership.',
     },
     {
@@ -90,7 +90,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Mentorship',
-      full_description: '',
+      full_description: 'An established partnership between colleagues for the purposes of learning and growth, usually senior and more experienced employees giving advice and support to younger employees earlier on in their careers.',
       short_description: 'I can easily find someone to coach me and help me learn and grow.',
     },
     {
@@ -98,7 +98,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Team support',
-      full_description: '',
+      full_description: 'A group of people work together cohesively, towards a common goal, creating a positive working atmosphere, and supporting each other to combine individual strengths to enhance team performance.',
       short_description: 'My team supports each other as we collaborate, and communicate freely together.',
     },
     {
@@ -106,7 +106,7 @@ exports.seed = async function(knex) {
       group: 'Cultural workplace characteristics',
       type: 'Personal Growth',
       name: 'Collaborative environment',
-      full_description: '',
+      full_description: 'A group of people constructively exploring ideas and working together to complete a task or achieve a goal. Collaboration encourages communication and promotes accountability and can improve productivity and give employees a sense of purpose in an organization.',
       short_description: 'We are encouraged to work together in a cross-functional manner and utilize our different skill sets to achieve goals and solve problems.  ',
     },
     {
@@ -114,15 +114,15 @@ exports.seed = async function(knex) {
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
       name: 'Compensation',
-      full_description: '',
+      full_description: 'Annual compensation is the combination of your base salary and the value of any financial benefits your employer provides. Annual salary is the amount of money your employer pays you over the course of a year in exchange for the work you perform.',
       short_description: 'I work with people who look like me and also people who don’t look like me.',
     },
     {
       id: 15,
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
-      name: 'Personal/ vacation time',
-      full_description: '',
+      name: 'Personal/ Vacation time',
+      full_description: 'A form of employee benefit consisting of a period of paid time off work to be used for whatever the employee wishes.',
       short_description: 'Vacation and/or Personal time is available and time off is encouraged.',
     },
     {
@@ -130,7 +130,7 @@ exports.seed = async function(knex) {
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
       name: 'Executive team',
-      full_description: '',
+      full_description: 'The exective team directs, plans, and coordinates operational activities for their organization or company and are normally responsible for devising policies and strategies to meet company goals.',
       short_description: 'In general, I agree with the decisions and vision for the company made by the executive team.  They are supportive in guiding the organization to reach those goals.',
     },
     {
@@ -138,7 +138,7 @@ exports.seed = async function(knex) {
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
       name: 'Benefits & perks',
-      full_description: '',
+      full_description: 'Benefits are non-wage compensation that supplements an employee’s salary and pay for expenses that an employee would have to cover with their income, such as health insurance or saving for retirement. Perks are extra rewards or incentives on top of salary and non-wage compensation. Perks are extras that go above and beyond traditional benefits and can include employee recognition, volunteer time or free food and snack.',
       short_description: 'I am happy with the benefits and perks I get from my company.',
     },
     {
@@ -146,7 +146,7 @@ exports.seed = async function(knex) {
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
       name: 'Job security',
-      full_description: '',
+      full_description: 'Job security is a sense of knowing that your job is safe from being cut, a feeling of protection against things like layoffs, economic downfalls, and other factors that could impact employment.',
       short_description: 'I am confident I will have this job for the foreseeable future.',
     },
     {
@@ -154,7 +154,7 @@ exports.seed = async function(knex) {
       group: 'Traditional workplace characteristics',
       type: 'Traditional',
       name: 'Interview process',
-      full_description: '',
+      full_description: 'The interview process is a multiple-stage process for hiring new employees. The stages mainly comprise job interviews held either one-on-one, with a group of candidates, or with a panel. Interviews are conducted in person, over the phone or by email, or via video conferencing tools. During this process were you updated on the status of your application, and informed about what the interview process would be like.',
       short_description: 'I was told what the interview process was, and I was updated on the status of my application in a timely manner.',
     },
   ]);

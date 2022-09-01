@@ -1,16 +1,6 @@
 const reviewData = require('../database/database')
 
 class Review {
-    // static async postManyReviews(newReviewInfoArray) {
-    //     const promises = newReviewInfoArray.map((review) => {
-    //         console.log(promises, 'test')
-    //         return this.postReview(review)
-    //     })
-    //     return Promise.all(promises)
-    //     //takes an array of promises, await resolved. 
-
-    // }
-
     static async everyReview(companyID) {
         const reviewDataFromDb = await reviewData.query('SELECT * FROM review JOIN company ON review.company_id = company.id JOIN "user" u ON review.user_id = u.id WHERE company.id = $1', [companyID])
         return reviewDataFromDb.rows;

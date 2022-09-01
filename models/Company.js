@@ -15,9 +15,9 @@ class Company {
         return companyDataFromDb.rows;
     }
     static async newCompanyCreate(name,info,location){
-        const companyDataFromDb = await companyData.query('INSERT into "company" (name,info,location) values ($1,$2,$3)', 
+        const companyDataFromDb = await companyData.query('INSERT into "company" (name,info,location) values ($1,$2,$3) RETURNING id', 
         [name,info,location])
-        return companyDataFromDb.rows;
+        return companyDataFromDb.rows[0]?.id;
     }
 }
 module.exports = Company;

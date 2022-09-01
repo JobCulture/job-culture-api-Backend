@@ -31,4 +31,5 @@ exports.seed = async function (knex) {
       job_location: 'Vancouver, Canada',
     }
   ]);
+  await Promise.all([1,2,3,4,5].map(() => knex.raw("SELECT nextval('user_id_seq') FROM \"user\"")));
 };

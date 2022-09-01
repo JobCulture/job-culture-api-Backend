@@ -7,22 +7,28 @@ exports.seed = async function (knex) {
   await knex('user').insert([
     {
       id: 1,
-      is_employee: false,
+      job_position: 'Tech Lead',
+      job_location: 'Montreal, Canada',
     },
     {
       id: 2,
-      is_employee: true,
+      job_position: '',
+      job_location: '',
     },
     {
-      id:3, 
-      is_employee: false,
+      id: 3, 
+      job_position: 'Product Designer',
+      job_location: 'New York, NY',
     },
     {
       id: 4,
+      job_position: '',
+      job_location: 'Toronto, Canada',
     },
     {
       id: 5,
-      is_employee: true,
+      job_position: '',
+      job_location: 'Vancouver, Canada',
     }
   ]);
 };

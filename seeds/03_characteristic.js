@@ -158,4 +158,6 @@ exports.seed = async function(knex) {
       short_description: 'I was told what the interview process was, and I was updated on the status of my application in a timely manner.',
     },
   ]);
+
+  await Promise.all(Array(19).fill(0).map(() => knex.raw("SELECT nextval('characteristic_id_seq') FROM characteristic")));
 };

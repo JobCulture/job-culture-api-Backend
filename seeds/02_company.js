@@ -37,9 +37,9 @@ exports.seed = async function (knex) {
     },
     {
       id: 6,
-      name: 'Spotify',
-      info: 'Spotify is a proprietary Swedish audio streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon.',
-      location: 'Sweden'
+      name: 'Shopify',
+      info: 'Shopify Inc. is a Canadian multinational e-commerce company headquartered in Ottawa, Ontario.',
+      location: 'Canada'
     },
     {
       id: 7,
@@ -66,4 +66,5 @@ exports.seed = async function (knex) {
       location: 'California, U.S.'
     },
   ]);
+  await Promise.all([1,2,3,4,5,6,7,8,9,10].map(() => knex.raw("SELECT nextval('company_id_seq') FROM company")));
 };

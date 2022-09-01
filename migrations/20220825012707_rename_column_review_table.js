@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
   return knex.schema.alterTable('review', function (table) {
-    table.renameColumn('characteristic', 'characteristic_id')
+    table.renameColumn('characteristic', 'characteristic_id');
   })
 };
 

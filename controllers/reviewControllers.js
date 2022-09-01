@@ -19,30 +19,41 @@ async function getAllReviews(req, res) {
 
 // post a Company Review
 async function postAReview(req, res) {
-    // const {user_id, company_id,review_text, rating, characteristic_id} = req.body[0];
-    // const newReviewInfo = {user_id, company_id,review_text, rating, characteristic_id}
-    let newReviewInfo = []
-    const reviews = req.body;
     try {
-        //user post, companypost, object with nested object
-        // const createAReview = await reviewModels.postReview(newReviewInfo);
-        reviews.forEach(async (ele) => {
-            console.log(ele, 'testingele')
-           const data = await reviewModels.postReview(ele)
-           newReviewInfo.push(data)
-        })
+    const reviewData = req.body;
 
-        // createAReview.forEach(ele => {
-        //     if(user_id && company_id){
-        //         newArray.push(review_text,rating,characteristic_id)
-        //     }
-        //     console.log(newArray)
-        // })
-        res.status(200).json({
-            reviewDb: newReviewInfo
-        });
+    let companyId = reviewData.company.id;
+    let userId = undefined;
+
+      const findCompany = companyId ? await companyModels.oneCompany(reviewData.company.id) : undefined;
+
+      if (!findCompany) {
+        companyId = await companyModels.newCompanyCreate(reviewData.company.name);
+      }
+
+      const findUser = await userModels.getUserByName(reviewData.user.email);     
+      if (!findUser) {
+        userId = await userModels.newUserCreate(reviewData.user.email, reviewData.user.job_location, reviewData.user.job_position);
+      } else {
+        userId = findUser.id;
+      }
+
+      
+      const ratings = reviewData.reviews;
+      const ratingsSavedPromises = ratings.map((element) => {
+        const newReview = {
+            ...element,
+            user_id: userId,
+            company_id: companyId
+        };
+        return reviewModels.postReview(newReview);
+      });
+
+      await Promise.all(ratingsSavedPromises);
+
+      res.status(200).json({ message: 'Review was created successfully'});
     }catch(err) {
-        res.status(500).send({message: err.message});
+        res.status(500).send({message: 'Internal server error' });
     }
 }
 

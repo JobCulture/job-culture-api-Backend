@@ -7,15 +7,13 @@ exports.seed = async function (knex) {
   await knex('company').insert([
     {
       id: 1,
-      name: 'Google',
-      info: 'Starting from two computer science students in a university dorm room, we now have over a hundred thousand employees and over one hundred offices around the world.',
+      name: 'Amazon',
+      info: 'All Amazon teams and businesses, from Prime delivery to AWS, are guided by four key tenets: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.',
       location: 'North America'
     },
     {
       id: 2,
-      name: 'Amazon',
-      info: 'All Amazon teams and businesses, from Prime delivery to AWS, are guided by four key tenets: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.',
-      location: 'North America'
+      name: 'Peak',
     },
     {
       id: 3,

@@ -47,8 +47,24 @@ async function companySearch(req, res) {
     }
 }
 
+async function newCompany(req, res){
+    const {name, info, location} = req.body
+        if(!name || !info || !location){
+        res.status(400).json({message: "complete company info"})
+    }
+    try {
+        const createNewCompany = await companyModels.newCompanyCreate(name, info, location)
+        res.status(200).json({
+            companydb: createNewCompany
+        })
+    }catch(err) {
+        res.status(404).send({message: err.message});
+    }
+}
+
 module.exports = {
     getAllCompany,
     singleCompany,
-    companySearch
+    companySearch,
+    newCompany
 }

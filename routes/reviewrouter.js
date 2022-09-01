@@ -4,5 +4,4 @@ const reviewController = require('../controllers/reviewControllers')
 
 router.get('/companies/:id/reviews/', reviewController.getAllReviews)//get company review
 router.post('/companies/:id/reviews/', reviewController.postAReview) //create a single company review
-
 module.exports = router
